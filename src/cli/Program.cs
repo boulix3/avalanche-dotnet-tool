@@ -81,7 +81,7 @@ public static class Program
         var vmBinaryPath = AnsiConsole.Ask("Build command output (binary path)", $"/tmp/{subnetName}/{subnetName}");
         var genesisPath = AnsiConsole.Ask("Genesis path", $"genesis.json");
         var avalancheNetworkRunnerPort = AnsiConsole.Ask("Avalanche network runner port", 8080);
-        var basePath = AnsiConsole.Ask("Avalanche base path", "~/.Avalanche/");
+        var basePath = AnsiConsole.Ask("Avalanche.Net base path", "~/.avalanche.net/");
         var avalanchePluginsPath = AnsiConsole.Ask("Avalanche plugins path", "~/.avalanchego/plugins");
         var enableSeq = AnsiConsole.Ask("Enable Seq logging", false);
         SeqConfig? seq = null;
