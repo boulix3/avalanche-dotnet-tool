@@ -1,0 +1,14 @@
+{
+    "basePath": "~/.Avalanche",
+    "vmBuildCommand":
+        "dotnet publish ~/code/Avalanche/sub.net/src/examples/SnakeGameVm/SnakeGameVm.csproj -o /tmp/subsnake",
+    "vmBinaryPath": "/tmp/subsnake/SnakeGameVm",
+    "subnetName": "subsnake",
+    "genesisPath": "~/code/Avalanche/sub.net/src/examples/SnakeGameVm/scripts/genesis.json",
+    "avalancheNetworkRunnerPort": 8080,
+    "avalanchePluginsPath": "~/.avalanchego/plugins",
+    "seq": {
+        "url": "http://localhost:18080/",
+        "token": "1234567801234567890"
+    }
+}

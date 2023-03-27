@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>Avalanche</ToolCommandName>
+        <LangVersion>preview</LangVersion>
+        <Version>0.0.1</Version>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <AnalysisMode>Recommended</AnalysisMode>
+        <!-- ignoring these warnings raised by c# code generated from proto files -->
+        <!-- eg : /.../Avalanche/src/obj/Debug/net7.0/linux-x64/Http.cs(8,7): error CS8981: The type name
+        'pb' only contains lower-cased ascii characters. Such names may become reserved for the
+        language. [/.../Avalanche/src/Avalanche.csproj] -->
+        <NoWarn>$(NoWarn);CS8981;CS1591</NoWarn>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="OneOf" Version="3.0.223" />
+        <PackageReference Include="CliWrap" Version="3.5.0" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.48.0" />
+        <PackageReference Include="NBitcoin" Version="7.0.17" />
+        <PackageReference Include="OneOf.SourceGenerator" Version="3.0.243" />
+        <PackageReference Include="Seq.Api" Version="2022.1.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.2" />
+        <PackageReference Include="Spectre.Console" Version="0.46.0" />
+        <PackageReference Include="sub.net" Version="0.0.2" />
+        <PackageReference Include="System.CommandLine.DragonFruit" Version="0.4.0-alpha.22272.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="../protos/annotations.proto" Link="Protos/annotations.proto">
+            <SourceUrl>https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/annotations.proto</SourceUrl>
+        </Protobuf>
+        <Protobuf Include="../protos/http.proto" Link="Protos/http.proto">
+            <SourceUrl>https://raw.githubusercontent.com/googleapis/googleapis/master/google/api/http.proto</SourceUrl>
+        </Protobuf>
+        <Protobuf Include="../protos/rpc.proto" Link="Protos/rpc.proto">
+            <SourceUrl>https://raw.githubusercontent.com/ava-labs/avalanche-network-runner/main/rpcpb/rpc.proto</SourceUrl>
+        </Protobuf>
+    </ItemGroup>
+</Project>
