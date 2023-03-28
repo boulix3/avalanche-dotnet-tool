@@ -8,7 +8,7 @@
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>avalanche</ToolCommandName>
         <LangVersion>preview</LangVersion>
-        <Version>0.0.2</Version>
+        <Version>0.0.3</Version>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AnalysisMode>Recommended</AnalysisMode>
         <!-- ignoring these warnings raised by c# code generated from proto files -->

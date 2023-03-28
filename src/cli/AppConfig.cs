@@ -8,7 +8,7 @@ public record AppConfig(
     int AvalancheNetworkRunnerPort, string BasePath,
     string AvalanchePluginsPath, SeqConfig? Seq = null)
 {
-    internal const string DefaultPath = "Avalanche.config.json";
+    internal const string DefaultPath = "avalanche.net.json";
 
     public string AvalancheGoPath => BinaryDependencyData.GetBinaryPath(BinaryDependency.avalancheGo, BasePath);
 
